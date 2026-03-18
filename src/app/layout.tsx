@@ -18,19 +18,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
-        <div className="bg-gradient-mesh" />
-        <nav className="navbar">
-          <div className="container">
-            <a href="#" className="nav-logo">HD<span className="gradient-text">.QA</span></a>
-            <ul className="nav-links">
-              <li><a href="#about" className="nav-link">About</a></li>
-              <li><a href="#experience" className="nav-link">Experience</a></li>
-              <li><a href="#skills" className="nav-link">Skills</a></li>
-              <li><a href="#education" className="nav-link">Education</a></li>
-            </ul>
-          </div>
-        </nav>
-        <main>{children}</main>
+        <div className="custom-bg" />
+        <div className="content-wrapper">
+          <nav className="navbar">
+            <div className="container">
+              <a href="#" className="nav-logo">HD<span className="gradient-text">.QA</span></a>
+              <ul className="nav-links">
+                <li><a href="#about" className="nav-link">About</a></li>
+                <li><a href="#experience" className="nav-link">Experience</a></li>
+                <li><a href="#skills" className="nav-link">Skills</a></li>
+                <li><a href="#education" className="nav-link">Education</a></li>
+              </ul>
+            </div>
+          </nav>
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );

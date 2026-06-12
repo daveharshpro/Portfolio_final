@@ -52,7 +52,7 @@ const Experience = () => {
   return (
     <section id="experience" className="section experience-section container">
       <div className="section-header">
-        <h4 className="gradient-text section-subtitle">02 EMPLOYMENT HISTORY</h4>
+        <h4 className="gradient-text section-subtitle">04 EMPLOYMENT HISTORY</h4>
         <h2 className="section-title">Where I&apos;ve Worked</h2>
       </div>
       

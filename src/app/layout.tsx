@@ -24,6 +24,8 @@ export default function RootLayout({
             <a href="#" className="nav-logo">HD<span className="gradient-text">.QA</span></a>
             <ul className="nav-links">
               <li><a href="#about" className="nav-link">About</a></li>
+              <li><a href="#domains" className="nav-link">Domains</a></li>
+              <li><a href="#specialized" className="nav-link">Specialized</a></li>
               <li><a href="#experience" className="nav-link">Experience</a></li>
               <li><a href="#skills" className="nav-link">Skills</a></li>
               <li><a href="#education" className="nav-link">Education</a></li>

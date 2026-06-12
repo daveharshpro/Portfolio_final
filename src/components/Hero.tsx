@@ -162,10 +162,10 @@ const Hero = () => (
       </div>
       <h2 className="hero-role">&lt;QA Engineer-ISTQB Certified/&gt;</h2>
       <p className="hero-description text-secondary">
-        Proficient in Playwright automation and test methodologies.
-        Combining engineering insights with newfound IT expertise to ensure
-        the delivery of high-quality products. Currently building scalable
-        automation frameworks and managing cross-browser web testing.
+        Quality Assurance Engineer with <span className="highlight-cyan">5+ years of experience</span> ensuring
+        the delivery of high-quality web and mobile applications across SaaS, WordPress,
+        Travel, and Real Estate domains. Building scalable Playwright automation frameworks
+        and driving end-to-end quality across complex enterprise platforms.
       </p>
     </div>
     <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.3s' }}>

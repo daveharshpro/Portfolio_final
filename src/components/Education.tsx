@@ -26,7 +26,7 @@ const Education = () => {
   return (
     <section id="education" className="section container">
        <div className="section-header text-center">
-         <h4 className="gradient-text section-subtitle">04 EDUCATION & COURSES</h4>
+         <h4 className="gradient-text section-subtitle">06 EDUCATION & COURSES</h4>
          <h2 className="section-title">Academic Background</h2>
        </div>
        

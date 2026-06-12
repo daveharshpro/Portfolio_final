@@ -153,7 +153,12 @@ const AsciiRobot = () => {
 // ── Hero layout ────────────────────────────────────────────────────────────
 const Hero = () => (
   <section id="about" className="section hero-section container">
-    <div className="hero-content animate-fade-in">
+    <motion.div
+      className="hero-content"
+      initial={{ opacity: 0, x: -60 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <div className="section-header">
         <h4 className="gradient-text section-subtitle">01 PROFILE</h4>
         <h1 className="hero-title">
@@ -167,10 +172,15 @@ const Hero = () => (
         Travel, and Real Estate domains. Building scalable Playwright automation frameworks
         and driving end-to-end quality across complex enterprise platforms.
       </p>
-    </div>
-    <div className="hero-visual animate-fade-in" style={{ animationDelay: '0.3s' }}>
+    </motion.div>
+    <motion.div
+      className="hero-visual"
+      initial={{ opacity: 0, x: 60 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+    >
       <AsciiRobot />
-    </div>
+    </motion.div>
   </section>
 );
 

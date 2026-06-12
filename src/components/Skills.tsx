@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Skills.css';
 
 const skillCategories = [
@@ -47,31 +49,74 @@ const skillCategories = [
   },
 ];
 
+const headerVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
+};
+
+const categoryVariants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+};
+
+const badgeVariants = {
+  hidden: { opacity: 0, scale: 0.75 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3, ease: 'easeOut' } },
+};
+
 const Skills = () => {
   return (
     <section id="skills" className="section container skills-container">
       <div className="skills-content">
-        <div className="section-header">
+        <motion.div
+          className="section-header"
+          variants={headerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
           <h4 className="gradient-text section-subtitle">05 EXPERTISE</h4>
-          <h2 className="section-title">Tech Stack & Skills</h2>
-        </div>
+          <h2 className="section-title">Tech Stack &amp; Skills</h2>
+        </motion.div>
 
         <div className="skills-categories">
           {skillCategories.map((cat, ci) => (
-            <div key={ci} className="skill-category animate-fade-in" style={{ animationDelay: `${ci * 0.1}s` }}>
+            <motion.div
+              key={ci}
+              className="skill-category"
+              variants={categoryVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: ci * 0.05 }}
+            >
               <h3 className="skill-category-title">{cat.category}</h3>
-              <div className="skills-grid">
+              <motion.div
+                className="skills-grid"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ staggerChildren: 0.06, delayChildren: 0.1 }}
+              >
                 {cat.skills.map((skill, si) => (
-                  <div
+                  <motion.div
                     key={si}
                     className="skill-badge glass-panel"
-                    style={{ animationDelay: `${(ci * cat.skills.length + si) * 0.04}s` }}
+                    variants={badgeVariants}
+                    whileHover={{
+                      scale: 1.08,
+                      y: -4,
+                      color: 'var(--accent-cyan)',
+                      borderColor: 'rgba(0,243,255,0.6)',
+                      boxShadow: '0 0 20px rgba(0,243,255,0.35)',
+                    }}
+                    transition={{ type: 'spring', stiffness: 350, damping: 18 }}
                   >
                     {skill}
-                  </div>
+                  </motion.div>
                 ))}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           ))}
         </div>
       </div>
